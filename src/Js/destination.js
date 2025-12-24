@@ -65,3 +65,5 @@ if (city) {
   cityName.textContent = "Unknown City";
   loading.classList.add("hidden")
 }
+
+document.querySelector("#weatherBtn").href=`weather.html?city=${city}`

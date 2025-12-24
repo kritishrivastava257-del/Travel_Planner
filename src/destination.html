@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Destination-Smart Travel Planner</title>
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ku_JAxG2yYPtQ1m3e0XNY3vaw5bL8IhHBg&s">
-    <link rel="stylesheet" href="./output.css">
-</head>
-<body class="bg-gray-300 min-h-screen">
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ku_JAxG2yYPtQ1m3e0XNY3vaw5bL8IhHBg&s"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-gray-300 min-h-screen">
     <!-- Navbar -->
-     <nav class="bg-white shadow-md">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-blue-900">Smart Travel</div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="home.html" class="text-gray-800 hover:text-blue-700">Home</a>
-                    <a href="destination.html" class="text-gray-800 hover:text-blue-700">Destination</a>
-                    <a href="weather.html" class="text-gray-800 hover:text-blue-700">Weather</a>
-                    <a href="place.html" class="text-gray-800 hover:text-blue-700">Place</a>
-                    <a href="budget.html" class="text-gray-800 hover:text-blue-700">Budget</a>
-                </div>
-            </div>
+    <nav class="bg-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="text-xl font-bold text-blue-900">Smart Travel</div>
+          <div class="hidden md:flex space-x-6">
+            <a href="home.html" class="text-gray-800 hover:text-blue-700"
+              >Home</a
+            >
+            <a href="destination.html" class="text-gray-800 hover:text-blue-700"
+              >Destination</a
+            >
+            <a href="weather.html" class="text-gray-800 hover:text-blue-700"
+              >Weather</a
+            >
+            <a href="place.html" class="text-gray-800 hover:text-blue-700"
+              >Place</a
+            >
+            <a href="budget.html" class="text-gray-800 hover:text-blue-700"
+              >Budget</a
+            >
+          </div>
         </div>
-     </nav>
+      </div>
+    </nav>
 
     <!-- Main Content -->
-     <div class="flex flex-col items-center justify-center mt-20">
-        <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md text-center">
-            <h1 class="text-2xl font-bold mb-4 text-sky-600">City Overview</h1>
-            <p class="text-gray-800 mb-2">You Searched For:</p>
-            <h2 id="cityName" class="text-xl font-semibold text-sky-700 mb-4"></h2>
-            <div id="loading" class="mt-4 text-gray-500">Loading City Info....</div>
-            <div id="cityInfo" class="hidden mt-4 bg-gray-100 p-4 rounded-lg shadow-inner space-y-3 text-gray-700">
-                <div class="flex justify-between">
-                    <span class="font-semibold">Latitude:</span>
-                    <span id="lat"></span>
+    <div class="flex flex-col items-center justify-center mt-20">
+      <div
+        class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md text-center"
+      >
+        <h1 class="text-2xl font-bold mb-4 text-sky-600">City Overview</h1>
+        <p class="text-gray-800 mb-2">You Searched For:</p>
+        <h2 id="cityName" class="text-xl font-semibold text-sky-700 mb-4"></h2>
+        <div id="loading" class="mt-4 text-gray-500">Loading City Info....</div>
+        <div
+          id="cityInfo"
+          class="hidden mt-4 bg-gray-100 p-4 rounded-lg shadow-inner space-y-3 text-gray-700"
+        >
+          <div class="flex justify-between">
+            <span class="font-semibold">Latitude:</span>
+            <span id="lat"></span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">Longitude:</span>
+            <span id="lon"></span>
+          </div>
 
-                    <span class="font-semibold">Longitude:</span>
-                    <span id="lon"></span>
-                </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">Country:</span>
+            <span id="country"></span>
+          </div>
 
-                <div class="flex justify-between">
-                    <span class="font-semibold">Country:</span>
-                    <span id="country"></span>
+          <div class="flex justify-between">
+            <span class="font-semibold">State:</span>
+            <span id="state"></span>
+          </div>
 
-                    <span class="font-semibold">State:</span>
-                    <span id="state"></span>
-                </div>
-
-                <div class="flex justify-between">
-                    <span class="font-semibold">Population:</span>
-                    <span id="population"></span>
-                </div>
-            </div>
-            <p id="error" class="hidden text-red-500 mt-2 font-semibold">City Not Found...</p>
+          <div class="flex justify-between">
+            <span class="font-semibold">Population:</span>
+            <span id="population"></span>
+          </div>
         </div>
-     </div>
-     <script src="./Js/destination.js"></script>
-    
-</body>
+        <a id="weatherBtn" class="block mt-4 bg-sky-500 text-white py-2 rounded hover:bg-sky-600">Check Weather</a>
+        <p id="error" class="hidden text-red-500 mt-2 font-semibold">
+          City Not Found...
+        </p>
+      </div>
+    </div>
+    <script src="./Js/destination.js"></script>
+  </body>
 </html>

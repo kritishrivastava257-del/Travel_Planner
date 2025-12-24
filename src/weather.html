@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather-Smart Travel Planner</title>
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ku_JAxG2yYPtQ1m3e0XNY3vaw5bL8IhHBg&s">
-    <link rel="stylesheet" href="./output.css">
-</head>
-<body class="bg-linear-to-br from-sky-200 to-sky-400 min-h-screen">
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ku_JAxG2yYPtQ1m3e0XNY3vaw5bL8IhHBg&s"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-linear-to-br from-sky-200 to-sky-400 min-h-screen">
     <!-- Navbar -->
-     <nav class="bg-white shadow-md">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-blue-900">Smart Travel</div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="home.html" class="text-gray-800 hover:text-blue-700">Home</a>
-                    <a href="destination.html" class="text-gray-800 hover:text-blue-700">Destination</a>
-                    <a href="weather.html" class="text-gray-800 hover:text-blue-700">Weather</a>
-                    <a href="place.html" class="text-gray-800 hover:text-blue-700">Place</a>
-                    <a href="budget.html" class="text-gray-800 hover:text-blue-700">Budget</a>
-                </div>
-            </div>
+    <nav class="bg-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="text-xl font-bold text-blue-900">Smart Travel</div>
+          <div class="hidden md:flex space-x-6">
+            <a href="home.html" class="text-gray-800 hover:text-blue-700"
+              >Home</a
+            >
+            <a href="destination.html" class="text-gray-800 hover:text-blue-700"
+              >Destination</a
+            >
+            <a href="weather.html" class="text-gray-800 hover:text-blue-700"
+              >Weather</a
+            >
+            <a href="place.html" class="text-gray-800 hover:text-blue-700"
+              >Place</a
+            >
+            <a href="budget.html" class="text-gray-800 hover:text-blue-700"
+              >Budget</a
+            >
+          </div>
         </div>
-     </nav>
-    
-</body>
+      </div>
+    </nav>
+
+    <!-- Weather Card -->
+    <div class="flex justify-center mt-20 px-4">
+      <div
+        class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md text-center"
+      >
+        <h1 class="text-2xl font-bold text-sky-600 mb-1">Weather Report</h1>
+        <h2 id="cityName" class="text-lg text-gray-700 font-semibold mb-6"></h2>
+
+        <!-- Loading -->
+        <div id="loading" class="text-gray-600 animate-pulse">
+          Fetching Weather Data...
+        </div>
+        <!-- Weather Data -->
+        <div></div>
+
+        <!-- Error -->
+        <p id="error" class="hidden text-red-600 mt-4 font-semibold">
+          ❌ Weather Data Not Found
+        </p>
+      </div>
+    </div>
+
+    <script src="./Js/weather.js"></script>
+  </body>
 </html>
