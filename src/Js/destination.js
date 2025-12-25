@@ -67,3 +67,4 @@ if (city) {
 }
 
 document.querySelector("#weatherBtn").href=`weather.html?city=${city}`
+document.querySelector("#placeBtn").href=`place.html?city=${city}`
