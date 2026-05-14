@@ -1,31 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget-Smart Travel Planner</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Budget - Smart Travel Planner</title>
+
     <link
       rel="icon"
       href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ku_JAxG2yYPtQ1m3e0XNY3vaw5bL8IhHBg&s"
     />
+
     <link rel="stylesheet" href="./output.css" />
-</head>
-<body class="bg-linear-to-br from-sky-200 to-sky-400 min-h-screen">
+  </head>
+
+  <body class="bg-gradient-to-br from-sky-200 to-sky-400 min-h-screen">
+
     <!-- Navbar -->
-     <nav class="bg-white shadow-md">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-blue-900">Smart Travel</div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="home.html" class="text-gray-800 hover:text-blue-700">Home</a>
-                    <a href="destination.html" class="text-gray-800 hover:text-blue-700">Destination</a>
-                    <a href="weather.html" class="text-gray-800 hover:text-blue-700">Weather</a>
-                    <a href="place.html" class="text-gray-800 hover:text-blue-700">Place</a>
-                    <a href="budget.html" class="text-gray-800 hover:text-blue-700">Budget</a>
-                </div>
-            </div>
+    <nav class="bg-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4">
+
+        <div class="flex justify-between items-center h-16">
+
+          <div class="text-2xl font-bold text-blue-900">
+            Smart Travel
+          </div>
+
+          <div class="hidden md:flex space-x-6">
+
+            <a href="home.html" class="text-gray-800 hover:text-blue-700">
+              Home
+            </a>
+
+            <a href="destination.html" class="text-gray-800 hover:text-blue-700">
+              Destination
+            </a>
+
+            <a href="weather.html" class="text-gray-800 hover:text-blue-700">
+              Weather
+            </a>
+
+            <a href="place.html" class="text-gray-800 hover:text-blue-700">
+              Place
+            </a>
+
+            <a href="budget.html" class="text-blue-700 font-semibold">
+              Budget
+            </a>
+
+          </div>
         </div>
-     </nav>
-    
-</body>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex justify-center items-center py-16 px-4">
+
+      <div class="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-3xl">
+
+        <!-- Heading -->
+        <h1 class="text-green-600 text-center text-4xl font-bold mb-2">
+          Travel Budget Planner
+        </h1>
+
+        <p class="text-center text-gray-500 mb-10">
+          Plan your travel expenses easily
+        </p>
+
+        <!-- Form -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- City -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              City Name
+            </label>
+
+            <input
+              type="text"
+              id="city"
+              placeholder="Enter city"
+              class="w-full rounded-xl bg-gray-100 border border-gray-300 p-3 outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+
+          <!-- Days -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              Number of Days
+            </label>
+
+            <input
+              type="number"
+              id="days"
+              placeholder="Enter days"
+              class="w-full rounded-xl bg-gray-100 border border-gray-300 p-3 outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+
+          <!-- People -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              Number of People
+            </label>
+
+            <input
+              type="number"
+              id="people"
+              placeholder="Enter people"
+              class="w-full rounded-xl bg-gray-100 border border-gray-300 p-3 outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+
+          <!-- Hotel -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              Hotel Per Day (₹)
+            </label>
+
+            <input
+              type="number"
+              id="hotel"
+              placeholder="Hotel cost"
+              class="w-full rounded-xl bg-gray-100 border border-gray-300 p-3 outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+
+          <!-- Food -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              Food Per Day Per Person (₹)
+            </label>
+
+            <input
+              type="number"
+              id="food"
+              placeholder="Food cost"
+              class="w-full rounded-xl bg-gray-100 border border-gray-300 p-3 outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+
+          <!-- Transport -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              Transport Cost (₹)
+            </label>
+
+            <input
+              type="number"
+              id="transport"
+              placeholder="Transport cost"
+              class="w-full rounded-xl bg-gray-100 border border-gray-300 p-3 outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+
+        </div>
+
+        <!-- Button -->
+        <button
+          id="calculateBtn"
+          class="w-full mt-8 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 rounded-xl transition duration-300"
+        >
+          Calculate Budget
+        </button>
+
+        <!-- Result -->
+        <div
+          id="resultBox"
+          class="hidden mt-8 bg-green-100 rounded-2xl p-6"
+        >
+
+          <h2 class="text-2xl font-bold text-green-700 mb-6 text-center">
+            Budget Summary
+          </h2>
+
+          <div class="space-y-4 text-lg text-gray-700">
+
+            <div class="flex justify-between">
+              <span>🏨 Hotel Expense:</span>
+              <span id="hotelResult"></span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>🍔 Food Expense:</span>
+              <span id="foodResult"></span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>🚕 Transport Expense:</span>
+              <span id="transportResult"></span>
+            </div>
+
+            <hr class="border-green-300">
+
+            <div class="flex justify-between text-2xl font-bold text-green-700">
+              <span>Total Budget:</span>
+              <span id="totalResult"></span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="./JS/budget.js"></script>
+
+  </body>
 </html>

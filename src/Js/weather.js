@@ -24,7 +24,7 @@ if (!city) {
   async function fetchWeather(cityName) {
     try {
       const geoRes = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
       );
       console.log(geoRes);
       if (!geoRes.ok) throw new Error("Geo API failed");
@@ -63,3 +63,5 @@ if (!city) {
   }
   fetchWeather(city);
 }
+
+document.querySelector("#placeBtn").href=`place.html?city=${city}`
