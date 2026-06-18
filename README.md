@@ -1,4 +1,6 @@
 Smart Travel Planner is a responsive web application designed to help users plan their trips efficiently by providing essential travel-related information in one place. The application allows users to search for cities and destinations, view real-time weather conditions, explore popular tourist attractions, and estimate travel expenses using a built-in budget calculator.
+
+
 Tech Stack
 HTML5 – Structure and content of the web application.
 CSS3 – Styling and layout design.
